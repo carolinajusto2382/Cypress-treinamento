@@ -14,7 +14,7 @@ describe('Acessando utilities', () => {
 }),
 
 describe('Acessando assertions', () => {
-  it('Clicando em commands', () => {
+  it('Clicando em Commands', () => {
     cy.visit('https://example.cypress.io')
     cy.contains('Commands').click();
     cy.contains('Assertions').click();
