@@ -13,7 +13,7 @@ describe('Acessando utilities', () => {
   })
 }),
 
-describe('Acessando assertions', () => {
+describe('Acessando Assertions', () => {
   it('Clicando em commands', () => {
     cy.visit('https://example.cypress.io')
     cy.contains('Commands').click();
