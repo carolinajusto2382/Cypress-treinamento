@@ -5,7 +5,7 @@ describe('Visitando a página', () => {
 }),
 
 describe('Acessando utilities', () => {
-  it('Clicando em utilities', () => {
+  it('Clicando em Utilities', () => {
     cy.visit('https://example.cypress.io')
     cy.contains('Utilities').click();
 
@@ -14,7 +14,7 @@ describe('Acessando utilities', () => {
 }),
 
 describe('Acessando Assertions', () => {
-  it('Clicando em commands', () => {
+  it('Clicando em Commands', () => {
     cy.visit('https://example.cypress.io')
     cy.contains('Commands').click();
     cy.contains('Assertions').click();
