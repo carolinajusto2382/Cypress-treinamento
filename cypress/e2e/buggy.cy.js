@@ -34,8 +34,8 @@ context ('Realizando testes no site Buggy Rating', () => {
             cy.get('#username').type(geraNickname());
             cy.get('#firstName').type('Carolina');
             cy.get('#lastName').type('Justo');
-            cy.get('#password').type('30117556Ca@');
-            cy.get('#confirmPassword').type('30117556Ca@');
+            cy.get('#password').type('66666666Ca@');
+            cy.get('#confirmPassword').type('66666666Ca@');
 
             cy.get('.btn-default').click();
 
@@ -98,6 +98,19 @@ context ('Realizando testes no site Buggy Rating', () => {
                 cy.get('#password').type('969696Ca@');
 
                 cy.get('.btn-default').should('be.disabled');
+            })
+
+            it('Os campos Password e Confirm password devem ser iguais', () => {
+                cy.get('.btn-success-outline').click();
+
+                cy.get('#username').type(geraNickname());
+                cy.get('#firstName').type('Carolina');
+                cy.get('#lastName').type('Justo');
+                cy.get('#password').type('123456Ca@');
+                cy.get('#confirmPassword').type('12345Ca@');
+
+                cy.get('.btn-default').should('be.disabled');
+                cy.contains('Passwords do not match').should('be.visible');
             })
             
         })
